@@ -31,44 +31,44 @@ namespace BinarySearchTree
         }
         public void Insert(int value)
         {
-            if (value >= data)//if the value passed in is >= to the data then insert to right side
+            if (value >= data)
             {
-                if (rightNode == null)//if right child node is null create new node
+                if (rightNode == null)
                 {
-                    rightNode = new Node(value);//creating a node
+                    rightNode = new Node(value);
                 }
                 else
                 {
-                    rightNode.Insert(value);//if right node is not null, insert on the right node
+                    rightNode.Insert(value);
                 }
             }
             else
             {
-                if (leftNode == null)//if the value passed in is < the data then insert to left side
+                if (leftNode == null)
                 {
-                    leftNode = new Node(value);//if the leftnode is null then create new node
+                    leftNode = new Node(value);
                 }
                 else
                 {
-                    leftNode.Insert(value);//if the left node is not null then insert on the left node
+                    leftNode.Insert(value);
                 }
             }
         }
         public Node Find(int value)
         {
-            Node currentNode = this;//this node is the starting current node
+            Node currentNode = this;
 
-            while (currentNode != null)//loop through this node and all of the children of this node
+            while (currentNode != null)
             {
-                if (value == currentNode.data)//if the current nodes data is == to the value passed in return it
+                if (value == currentNode.data)
                 {
                     return currentNode;
                 }
-                else if (value > currentNode.data)//if the value passed in is greater than the current data then go to the right child
+                else if (value > currentNode.data)
                 {
                     currentNode = currentNode.rightNode;
                 }
-                else//otherwise if the value is less than the current nodes data the go to the left child node 
+                else
                 {
                     currentNode = currentNode.leftNode;
                 }

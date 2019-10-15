@@ -20,10 +20,8 @@ namespace BinarySearchTree
             binaryTree.Insert(6);
             binaryTree.Insert(1);
 
-            Node node = binaryTree.Find(8);
-            Console.WriteLine(binaryTree.Find(8));
-            Console.ReadLine();
-
+            Node node = binaryTree.Find(3);
+            
 
 
         }
